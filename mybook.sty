@@ -1,0 +1,285 @@
+\RequirePackage{tabularx}[1995/03/20]
+\RequirePackage{theorem}[1995/11/23]
+\RequirePackage{amsmath}[1995/11/23]
+
+%zvacsi odsadenie cisiel v lof, lot
+%2.3em -> 3.3em
+\renewcommand*\l@figure{\@dottedtocline{1}{1.5em}{3.3em}}
+\let\l@table\l@figure
+
+%ciarka do zoznamov
+\def\myarray#1{{\mathcode`\,="613B #1}} 
+% desatinna ciarka nema za sebou medzeru
+\mathcode`\,="013B
+
+% Hlava a pata
+\RequirePackage{fancyhdr}
+%\pagestyle{fancyplain}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\lhead[\fancyplain{}{\bfseries\thepage}]%
+  {\fancyplain{}{\bfseries\rightmark}}
+\rhead[\fancyplain{}{\bfseries\leftmark}]%
+  {\fancyplain{}{\bfseries\thepage}}
+\cfoot{}
+
+% Nech prazdna strana je bez hlavicky a paty
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+  \hbox{}
+%  \vspace*{\fill}
+%  \begin{center}
+%  \end{center}
+%  \vspace{\fill}
+  \thispagestyle{empty}
+  \newpage
+  \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+
+
+\newcommand\abbreviations{% 
+   \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \chapter*{\abbreviationsname
+        \@mkboth{%
+           \MakeUppercase\abbreviationsname}{\MakeUppercase\abbreviationsname}}%
+    \if@restonecol\twocolumn\fi
+    } 
+
+\newcommand\abbreviationsname{Zoznam ozna\v{c}en\'{i}} 
+
+\newcommand{\abbitem}[2]{
+    \begin{minipage}[t]{1.2cm} #1 \end{minipage}
+    \hfill
+    \begin{minipage}[t]{11.2cm} #2 \end{minipage}
+
+    \vspace{0.7mm}}
+
+
+
+% List environment for bibliography - change
+%bibitem to item and delete its label (if any)
+\newenvironment{zozlit}[1]{\begin{list}{}{%
+\setlength{\itemindent}{-\leftmargin}%
+\setlength{\parsep}{0cm}%
+\setlength{\itemsep}{0.5ex}%
+}#1
+}{\end{list}}
+
+% Environment to describe variables
+% Requires tabularx, array styles
+% 3 column environment, {llX}, use & to go
+% to the next column, \\ to go to the next line
+% (as tabular)
+\newlength{\mylen}
+\newenvironment{popis}[1]%
+{\setlength{\parindent}{0pt}%
+\renewcommand{\arraystretch}{1.2}%
+\settowidth{\mylen}{#1}%
+\addtolength{\mylen}{-\textwidth}%
+\setlength{\mylen}{-\mylen}%
+#1%
+\tabularx{\mylen}[t]{@{}ll@{}X@{}}}%
+{\endtabularx}%
+
+% trojcislove rovnice, tabulky, obrazky
+\@addtoreset{equation}{section}
+\def\theequation{\thesection.\arabic{equation}}
+\@addtoreset{figure}{section}
+\def\thefigure{\thesection.\arabic{figure}}
+\@addtoreset{table}{section}
+\def\thetable{\thesection.\arabic{table}}
+
+%%===================================================================
+% prostredie Priklad
+\newcounter{exm}[section]
+\def\theexm{\thesection.\arabic{exm}}
+\newenvironment{priklad}[2][]
+{\refstepcounter{exm}
+ \vspace{1ex}\begin{sloppypar}\noindent#1{\bfseries Pr\'{\i}klad \theexm.} {\em #2}
+ \@beginparpenalty\@M
+ \begin{list}{}{\setlength{\topsep}{0ex}}\item[]
+ \@beginparpenalty\@endparpenalty
+}
+{\end{list}\end{sloppypar}\vspace{1ex}}
+% prostredie Priklad
+%===================================================================
+
+%%===================================================================
+% prostredie Riesenie
+\newenvironment{riesenie}
+{ \vspace{1ex}\noindent{\bfseries Rie\v{s}enie:}
+ \@beginparpenalty\@M
+ \begin{list}{}{\setlength{\topsep}{0ex}%
+  \setlength{\leftmargin}{\rightmargin}%
+%  \setlength{\itemindent}{0.5cm}%
+\setlength{\listparindent}{0.5cm}%
+ }\begin{sloppypar}\item[]
+ \@beginparpenalty\@endparpenalty
+}
+{\end{sloppypar}\end{list}%\vspace{1ex}
+}
+% prostredie Riesenie
+%===================================================================
+
+%===================================================================
+% prostredie Uloha
+\newcounter{ulo}[section]
+\def\theulo{\thesection.\arabic{ulo}}
+\newenvironment{uloha}[1]
+{\refstepcounter{ulo}
+ \vspace{1ex}\begin{sloppypar}\noindent{\bfseries \'Uloha \theulo:} {\em #1}
+ \@beginparpenalty\@M
+  \begin{list}{}{\setlength{\topsep}{0ex}%
+  \setlength{\leftmargin}{\rightmargin}}\item[]
+ \@beginparpenalty\@endparpenalty
+}
+{\end{list}\end{sloppypar}\vspace{1ex}}
+% prostredie Uloha
+%===================================================================
+
+%{
+% \theoremstyle{break}
+% \theorembodyfont{\rmfamily}
+% \newtheorem{priklad}{Pr\'{\i}klad}[section]
+%}
+\theoremstyle{plain}
+\newtheorem{note}{Pozn\'amka}[section]
+\theoremstyle{break}
+\newtheorem{program}{Program}[section]
+\newcommand{\prog}[2]{\begin{program}[#1]#2\end{program}}
+\theoremstyle{plain}
+
+
+% Tucne, sikme matematicke pismo
+\def\ve#1{\mathchoice{\mbox{\boldmath$\displaystyle#1$}}
+{\mbox{\boldmath$\textstyle#1$}}
+{\mbox{\boldmath$\scriptstyle#1$}}
+{\mbox{\boldmath$\scriptscriptstyle#1$}}}
+
+\def\ex#1{E\left\{#1\right\}}
+\def\cov#1{\mbox{Cov}\left(#1\right)}
+\def\covi#1{\mbox{Cov}_{#1}}
+\newcommand{\cova}[2]{\mbox{Cov}_{#1}\left(#2\right)}
+
+
+\newcommand{\mat}[1]{\left(#1\right)} % matrix - parentheses
+\def\vvec#1{\begin{pmatrix}#1\end{pmatrix}} %vertical vector
+\newcommand{\mt}[4]{\begin{matrix} #1&#2\\#3&#4 \end{matrix}}
+\newcommand{\mx}[4]{\begin{pmatrix}#1 & #2 \\ #3 & #4\end{pmatrix}}
+\def\lt#1{{\cal L}\left\{#1\right\}}
+\def\ilt#1{\mbox{${\cal L}^{-1}\left\{#1\right\}$}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\tg}{\mathop{\rm tg}\nolimits}
+\newcommand{\arctg}{\mathop{\rm arctg}\nolimits}
+
+\newcommand{\fig}[1]{\ref{fig:#1}}
+\newcommand{\eq}[1]{(\ref{eq:#1})}
+\newcommand{\tab}[1]{\ref{tab:#1}}
+\newcommand{\prg}[1]{\ref{prg:#1}}
+
+
+\newcommand{\dd}{{\text d}}
+\newcommand{\rmd}{\dd}
+\newcommand{\dt}{\dd{}t}
+\newcommand{\ee}{\text e}
+
+
+\newcommand{\bm}[1]{\mbox{\boldmath $#1$}}
+\newcommand{\ba}{\bm{a}}
+\newcommand{\bff}{\bm{f}}
+\newcommand{\bK}{\bm{K}}
+\newcommand{\bu}{\bm{u}}
+\newcommand{\bw}{\bm{w}}
+\newcommand{\by}{\bm{y}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cHP}{\mathcal{HP}}
+\newcommand{\cHS}{\mathcal{HS}}
+\newcommand{\cPH}{\mathcal{PH}}
+\newcommand{\cPL}{\mathcal{PL}}
+\newcommand{\cPT}{\mathcal{PT}}
+\newcommand{\bxi}{\bm{\xi}}
+\newcommand{\hT}{\hat{T}}
+\newcommand{\hU}{\hat{U}}
+\newcommand{\hX}{\hat{X}}
+\newcommand{\hY}{\hat{Y}}
+\newcommand{\hu}{\hat{u}}
+\newcommand{\hv}{\hat{v}}
+\newcommand{\hx}{\hat{x}}
+\newcommand{\hy}{\hat{y}}
+\newcommand{\tA}{\tilde{A}}
+\newcommand{\tB}{\tilde{B}}
+\newcommand{\tC}{\tilde{C}}
+\newcommand{\tG}{\tilde{G}}
+\newcommand{\tH}{\tilde{H}}
+\newcommand{\tJ}{\tilde{J}}
+\newcommand{\tK}{\tilde{K}}
+\newcommand{\tM}{\tilde{M}}
+\newcommand{\tN}{\tilde{N}}
+\newcommand{\tP}{\tilde{P}}
+\newcommand{\tQ}{\tilde{Q}}
+\newcommand{\tS}{\tilde{S}}
+\newcommand{\tu}{\tilde{u}}
+\newcommand{\tV}{\tilde{V}}
+\newcommand{\tW}{\tilde{W}}
+\newcommand{\tx}{\tilde{x}}
+\newcommand{\talpha}{\tilde{\alpha}}
+\newcommand{\tlambda}{\tilde{\lambda}}
+\newcommand{\brA}{\bar{A}}
+\newcommand{\brB}{\bar{B}}
+\newcommand{\brP}{\bar{P}}
+\newcommand{\brQ}{\bar{Q}}
+\newcommand{\brR}{\bar{R}}
+\newcommand{\brx}{\bar{x}}
+\newcommand{\bry}{\bar{y}}
+\newcommand{\brW}{\bar{W}}
+\newcommand{\brw}{\bar{w}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+\newcommand{\oE}{\overline{E}}
+\newcommand{\oF}{\overline{F}}
+\newcommand{\oa}{\overline{a}}
+\newcommand{\ou}{\overline{u}}
+\newcommand{\ox}{\overline{x}}
+\newcommand{\oalpha}{\overline{\alpha}}
+\newcommand{\odelu}{\Delta \overline{u}}
+\newcommand{\ua}{\underline{a}}
+\newcommand{\uu}{\underline{u}}
+\newcommand{\ualpha}{\underline{\alpha}}
+\newcommand{\udelu}{\Delta \underline{u}}
+\newcommand{\delK}{K_\Delta}
+\newcommand{\delM}{M_\Delta}
+\newcommand{\delN}{N_\Delta}
+\newcommand{\delm}{m_\Delta}
+\newcommand{\delu}{\Delta u}
+\newcommand{\delU}{\Delta U}
+\newcommand{\rank}{\mbox{rank}}
+\newcommand{\vol}{\mbox{vol}}
+\newcommand{\ones}{\overline{1}}
+\newcommand{\zeros}{\overline{0}}
+\newcommand{\diag}{\mbox{diag}}
+\newcommand{\abs}{\mbox{abs}}
+\newcommand{\xref}{x_{\text{ref}}}
+\newcommand{\uref}{u_{\text{ref}}}
+\newcommand{\yref}{y_{\text{ref}}}
+\newcommand{\sref}{s_{\text{ref}}}
+\newcommand{\rb}[1]{\raisebox{2ex}[0pt]{#1}}
+
+\endinput

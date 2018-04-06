@@ -1,0 +1,96 @@
+\chapter{Základné triky v LaTeX}
+\label{jablka}
+
+\section{Bibliografické citácie}
+
+Citova môeme nasledovne \cite{Eykhoff84}. Ak chceme citova viacero autorov, tak môeme to robi naraz \cite{Fontes00,Eykhoff84}. Databazu citovanych dokumentov piseme do suboru *.bib. Všetky typy dokumentov (kniha, èlánok etc.) má svoju vlastnú kategóriu. Autora publikácie môeme aj napísa, napríklad e v práci Qin a Badgwell \cite{Qin99} dokázali e. Citácia je súèasou vety, môeme to kombinova do vety \cite{Karny80} alebo dáva pred bodkou na koniec \cite{Far90}.
+
+\section{Obrázky}
+
+Obrázky môeme dáva do textu nasledovne. A potom jednoducho môeme odvola na obrázok pomocou Obr. \ref{OBRAZOK 1.1}.
+%************ OBRAZOK **************
+\begin{figure}[!tbh]
+\centering
+\includegraphics[width=80mm]{obr/OBRAZOK1_1.eps}
+\caption{Spojenie objektu s prostredím}\label{OBRAZOK 1.1}
+\end{figure}
+%************ KONIEC **************
+
+\section{Odvolávky na èasti práce}
+\label{hrusky}
+
+Kapitolu, podkapitolu alebo podobné veci oznaèíme príkazom "label", a nasledovne na nich odvoláme príkazom "ref". Napríklad v Kap. \ref{jablka} sme odvodili ...
+
+\section{Matematika}
+
+Vzorce môeme pod¾a potreby priamo písa do textu, napríklad: Èíselná postupnos - mnoina èísel $\vec{R} \{a_m, a_{m+1}, ...\}
+= \{a_m\}_{m = n}^\infty$, respektíve to oèíslova a písa do samostatného riadku napríklad pomocou
+  \begin{align}
+  \label{mojarovnica}
+    E_0 &= mc^2                              \\
+    E &= \frac{mc^2}{\sqrt{1-\frac{v^2}{c^2}}}
+  \end{align}
+kde potom môeme odvoláva na rovnicu pomocou Rov. \eqref{mojarovnica}. Namiesto príkazu align, môeme pouíva aj eqnarray.
+
+
+\section{Vymenovanie, èíslovanie}
+
+Z h¾adiska spôsobu, akım tvoríme matematickı model, môeme pri identifikácii v zásade postupova dvoma odlišnımi spôsobmi:
+\begin{itemize}
+\item analyticky, t.j. matematicko - fyzikálnou analızou vlastností objektu,
+\item experimentálne.
+\end{itemize}
+Kadı z tıchto spôsobov má svoje prednosti a nevıhody.
+
+\begin{enumerate}
+  \item Vo¾ba triedy operátorov $S$, na ktorej sa h¾adá vlastné riešenie. Urèenie triedy závisí predovšetkım od objemu apriórnej informácie a znalostí o objekte, musí však rešpektova ciele a poiadavky syntézy riadenia a ekonomické otázky spojené s identifikáciou.
+  \item Vo¾ba vhodnej stratovej funkcie a na jej báze definovanej úèelovej funkcie. Najèastejšie sú pouívané kvadratické úèelové funkcie.
+  \item Vıber vhodného algoritmu pre riešenie úlohy identifikácie, t.j. optimalizaènej úlohy.
+\end{enumerate}
+
+\section{Poèítaèovı program}
+
+Poèítaèovı program môeme jednoducho vloi do textu pomocou
+\lstset{language=exMatlab}
+\begin{lstlisting}
+N=1024;              % Pocet vzoriek
+f1=1;                % Frekvencia harmonickeho signalu
+FS=200;              % Frekvencia vzorkovania
+n=0:N-1;             % Poradove cisla vzorky
+x=sin(2*pi*f1*n/FS); % Generujeme signal, x(n)
+[Rxx,Tau]=xcorr(x);  % Odhad autokorelacnej funkcie
+\end{lstlisting}
+Jazyk programu vieme urèi my, napríklad Matlab tu je rozšírenı o extra príkazy.
+
+
+\section{Príklad}
+
+Ak chceme uvies inštrukènı príklad, potom máme
+\begin{exmp}
+Joko má 5 melónov, vypoèítajte hmotnos Slnka.
+\end{exmp}
+kde príklad je ukonèenı znamienkom QED (štvorec).
+
+\section{Tabu¾ky}
+
+Toto je príklad tabu¾ky:
+\begin{table}[!h]
+\centering
+\caption{Zoradenie metód na základe objemu apriórnych znalostí}
+\begin{tabular}{ |l|c|c|c| }
+  \hline
+  \parbox[c]{3.5cm}{Metóda} & Kovariancia & \parbox[c]{3cm}{Hustota\\pravdepodobnosti}& Apriórna hustota\\ [0.2cm] \hline
+  \parbox[c]{3.5cm}{Najmenšie štvorce} & Nie & Nie & Nie \\ [0.2cm] \hline
+  \parbox[c]{3.5cm}{Najmenšie štvorce,\\Markov odhad}& Áno & Nie & Nie \\ [0.2cm]   \hline
+  \parbox[c]{3.5cm}{Maximálna\\vierohodnos}& Áno & Áno & Nie \\ [0.2cm] \hline
+  \parbox[c]{3.5cm}{Bayesovské metódy} & Áno & Áno & Áno \\ [0.2cm] \hline
+\end{tabular}
+    \label{TABULKA_3_1}
+\end{table}
+
+Na tabu¾ky taktie môeme odvoláva pomocou Tab. \ref{TABULKA_3_1}. Tabu¾ky taktie majú popis, dávame to nad tabu¾kou.
+
+
+
+
+
