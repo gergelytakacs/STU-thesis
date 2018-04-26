@@ -1,56 +1,87 @@
-\chapter{Základné triky v LaTeX}
+\chapter{ZÃ¡kladnÃ© triky v LaTeX}
 \label{jablka}
 
-\section{Bibliografické citácie}
+% Toto je komentÃ¡r
 
-Citova môeme nasledovne \cite{Eykhoff84}. Ak chceme citova viacero autorov, tak môeme to robi naraz \cite{Fontes00,Eykhoff84}. Databazu citovanych dokumentov piseme do suboru *.bib. Všetky typy dokumentov (kniha, èlánok etc.) má svoju vlastnú kategóriu. Autora publikácie môeme aj napísa, napríklad e v práci Qin a Badgwell \cite{Qin99} dokázali e. Citácia je súèasou vety, môeme to kombinova do vety \cite{Karny80} alebo dáva pred bodkou na koniec \cite{Far90}.
+Ãšloha tejto kapitoly je poukÃ¡zaÅ¥ na niektorÃ© zÃ¡kladnÃ© triky v LaTeX pri pÃ­sanÃ­ zÃ¡vereÄnej prÃ¡ci. VygenerovanÃ© PDF-Äko spolu so zdrojovÃ½m kÃ³dom by mali slÃºÅ¾iÅ¥ ako nÃ¡vod na pÃ­sanie dokumentu.
 
-\section{Obrázky}
 
-Obrázky môeme dáva do textu nasledovne. A potom jednoducho môeme odvola na obrázok pomocou Obr. \ref{OBRAZOK 1.1}.
+\section{Vymenovanie, ÄÃ­slovanie}
+
+NeusporiadanÃ© vymenovanie mÃ´Å¾eme v prostredÃ­ \LaTeX robiÅ¥ nasledovne:
+\begin{itemize}
+\item PrvÃ½ bod,
+\item druhÃ½ bod,
+\item poslednÃ½ bod.
+\end{itemize}
+Samozrejme mÃ´Å¾eme pouÅ¾Ã­vaÅ¥ aj podÃºrovÅˆe, teda
+\begin{itemize}
+\item PrvÃ½ bod,
+\item \begin{itemize}
+\item Janko,
+\item Ferko,
+\item JoÅ¾ko.
+\end{itemize}
+\item poslednÃ½ bod.
+\end{itemize}
+
+OÄÃ­slovanÃ©, usporiadanÃ© vymenovanie mÃ´Å¾eme urobiÅ¥ nasledovne:
+\begin{enumerate}
+  \item VoÄ¾ba triedy operÃ¡torov $S$, na ktorej sa hÄ¾adÃ¡ vlastnÃ© rieÅ¡enie. UrÄenie triedy zÃ¡visÃ­ predovÅ¡etkÃ½m od objemu apriÃ³rnej informÃ¡cie a znalostÃ­ o objekte, musÃ­ vÅ¡ak reÅ¡pektovaÅ¥ ciele a poÅ¾iadavky syntÃ©zy riadenia a ekonomickÃ© otÃ¡zky spojenÃ© s identifikÃ¡ciou.
+  \item VoÄ¾ba vhodnej stratovej funkcie a na jej bÃ¡ze definovanej ÃºÄelovej funkcie. NajÄastejÅ¡ie sÃº pouÅ¾Ã­vanÃ© kvadratickÃ© ÃºÄelovÃ© funkcie.
+  \item VÃ½ber vhodnÃ©ho algoritmu pre rieÅ¡enie Ãºlohy identifikÃ¡cie, t.j. optimalizaÄnej Ãºlohy.
+\end{enumerate}
+
+
+\section{ObrÃ¡zky}
+
+ObrÃ¡zky mÃ´Å¾eme dÃ¡vaÅ¥ do textu nasledovne. A potom jednoducho mÃ´Å¾eme odvolaÅ¥ na obrÃ¡zok pomocou Obr. \ref{OBRAZOK 1.1}.
 %************ OBRAZOK **************
 \begin{figure}[!tbh]
 \centering
 \includegraphics[width=80mm]{obr/OBRAZOK1_1.eps}
-\caption{Spojenie objektu s prostredím}\label{OBRAZOK 1.1}
+\caption{StruÄnÃ½ popis obrÃ¡zku.}\label{OBRAZOK 1.1}
 \end{figure}
 %************ KONIEC **************
+Nezabudnime, Å¾e popis obrÃ¡zku je ukonÄenÃ½ bodkou.
 
-\section{Odvolávky na èasti práce}
+Na zaÄiatku vety vypÃ½Å¡eme slovo ObrÃ¡zok, kÃ½m vÅ¡ade inde pouÅ¾Ã­vame skratku Obr.
+
+\subsection{FormÃ¡t obrÃ¡zkov}
+
+Pre ukladanie a zobrazenie obrÃ¡zkov pouÅ¾Ã­vame nasledovnÃ© sÃºborovÃ© formÃ¡ty:
+\begin{itemize}
+\item *.eps pre vektorovÃº grafiku (grafy, ilustrÃ¡cie, priebehy)
+\item *.png na screenshoty a
+\item *.jpg na rasterovÃº grafiku (fotografie).
+\end{itemize}
+
+\subsection{ObrÃ¡zky z Matlabu}
+
+Z Matlabu exportujeme obrÃ¡zky do formÃ¡tu *.eps.
+
+\section{OdvolÃ¡vky na Äasti prÃ¡ce}
 \label{hrusky}
 
-Kapitolu, podkapitolu alebo podobné veci oznaèíme príkazom "label", a nasledovne na nich odvoláme príkazom "ref". Napríklad v Kap. \ref{jablka} sme odvodili ...
+Kapitolu, podkapitolu alebo podobnÃ© veci oznaÄÃ­me prÃ­kazom "label", a nasledovne na nich odvolÃ¡me prÃ­kazom "ref". NaprÃ­klad v Kap. \ref{jablka} sme odvodili\ldots. 
+Na zaÄiatku vety vypÃ½Å¡eme slovo Kapitola, kÃ½m vÅ¡ade inde pouÅ¾Ã­vame skratku Kap. Podkapitoly a pod-podkapitoly v odvolÃ¡vkach nerozliÅ¡ujeme, na Å¡truktÃºru dokumentu pouÅ¾Ã­vame vÅ¾dy Kap.
 
 \section{Matematika}
 
-Vzorce môeme pod¾a potreby priamo písa do textu, napríklad: Èíselná postupnos - mnoina èísel $\vec{R} \{a_m, a_{m+1}, ...\}
-= \{a_m\}_{m = n}^\infty$, respektíve to oèíslova a písa do samostatného riadku napríklad pomocou
+Vzorce mÃ´Å¾eme podÄ¾a potreby priamo pÃ­saÅ¥ do textu, naprÃ­klad: ÄŒÃ­selnÃ¡ postupnosÅ¥ - mnoÅ¾ina ÄÃ­sel $\vec{R} \{a_m, a_{m+1}, ...\}
+= \{a_m\}_{m = n}^\infty$, respektÃ­ve to oÄÃ­slovaÅ¥ a pÃ­saÅ¥ do samostatnÃ©ho riadku naprÃ­klad pomocou
   \begin{align}
   \label{mojarovnica}
     E_0 &= mc^2                              \\
     E &= \frac{mc^2}{\sqrt{1-\frac{v^2}{c^2}}}
   \end{align}
-kde potom môeme odvoláva na rovnicu pomocou Rov. \eqref{mojarovnica}. Namiesto príkazu align, môeme pouíva aj eqnarray.
+kde potom mÃ´Å¾eme odvolÃ¡vaÅ¥ na rovnicu pomocou Rov. \eqref{mojarovnica}. Pozor na to, Å¾e odkaz na ÄÃ­sla rovnice je zahrnutÃ¡ v zÃ¡tvorkÃ¡ch, to platÃ­ iba na rovnice, nie pre obrÃ¡zky, tabuÄ¾ky a Å¡truktÃºru dokumentu. Namiesto prÃ­kazu align, mÃ´Å¾eme pouÅ¾Ã­vaÅ¥ aj eqnarray.
 
+Na zaÄiatku vety vypÃ½Å¡eme slovo Rovnica, kÃ½m vÅ¡ade inde pouÅ¾Ã­vame skratku Rov.
 
-\section{Vymenovanie, èíslovanie}
+\section{PoÄÃ­taÄovÃ½ program}
 
-Z h¾adiska spôsobu, akım tvoríme matematickı model, môeme pri identifikácii v zásade postupova dvoma odlišnımi spôsobmi:
-\begin{itemize}
-\item analyticky, t.j. matematicko - fyzikálnou analızou vlastností objektu,
-\item experimentálne.
-\end{itemize}
-Kadı z tıchto spôsobov má svoje prednosti a nevıhody.
-
-\begin{enumerate}
-  \item Vo¾ba triedy operátorov $S$, na ktorej sa h¾adá vlastné riešenie. Urèenie triedy závisí predovšetkım od objemu apriórnej informácie a znalostí o objekte, musí však rešpektova ciele a poiadavky syntézy riadenia a ekonomické otázky spojené s identifikáciou.
-  \item Vo¾ba vhodnej stratovej funkcie a na jej báze definovanej úèelovej funkcie. Najèastejšie sú pouívané kvadratické úèelové funkcie.
-  \item Vıber vhodného algoritmu pre riešenie úlohy identifikácie, t.j. optimalizaènej úlohy.
-\end{enumerate}
-
-\section{Poèítaèovı program}
-
-Poèítaèovı program môeme jednoducho vloi do textu pomocou
+PoÄÃ­taÄovÃ½ program mÃ´Å¾eme jednoducho vloÅ¾iÅ¥ do textu pomocou
 \lstset{language=exMatlab}
 \begin{lstlisting}
 N=1024;              % Pocet vzoriek
@@ -60,35 +91,46 @@ n=0:N-1;             % Poradove cisla vzorky
 x=sin(2*pi*f1*n/FS); % Generujeme signal, x(n)
 [Rxx,Tau]=xcorr(x);  % Odhad autokorelacnej funkcie
 \end{lstlisting}
-Jazyk programu vieme urèi my, napríklad Matlab tu je rozšírenı o extra príkazy.
+Jazyk programu vieme urÄiÅ¥ my, naprÃ­klad Matlab tu je rozÅ¡Ã­renÃ½ o extra prÃ­kazy.
 
 
-\section{Príklad}
+\section{TabuÄ¾ky}
 
-Ak chceme uvies inštrukènı príklad, potom máme
-\begin{exmp}
-Joko má 5 melónov, vypoèítajte hmotnos Slnka.
-\end{exmp}
-kde príklad je ukonèenı znamienkom QED (štvorec).
-
-\section{Tabu¾ky}
-
-Toto je príklad tabu¾ky:
+Toto je prÃ­klad tabuÄ¾ky:
 \begin{table}[!h]
 \centering
-\caption{Zoradenie metód na základe objemu apriórnych znalostí}
+\caption{Zoradenie metÃ³d na zÃ¡klade objemu apriÃ³rnych znalostÃ­}
 \begin{tabular}{ |l|c|c|c| }
   \hline
-  \parbox[c]{3.5cm}{Metóda} & Kovariancia & \parbox[c]{3cm}{Hustota\\pravdepodobnosti}& Apriórna hustota\\ [0.2cm] \hline
-  \parbox[c]{3.5cm}{Najmenšie štvorce} & Nie & Nie & Nie \\ [0.2cm] \hline
-  \parbox[c]{3.5cm}{Najmenšie štvorce,\\Markov odhad}& Áno & Nie & Nie \\ [0.2cm]   \hline
-  \parbox[c]{3.5cm}{Maximálna\\vierohodnos}& Áno & Áno & Nie \\ [0.2cm] \hline
-  \parbox[c]{3.5cm}{Bayesovské metódy} & Áno & Áno & Áno \\ [0.2cm] \hline
+  \parbox[c]{3.5cm}{MetÃ³da} & Kovariancia & \parbox[c]{3cm}{Hustota\\pravdepodobnosti}& ApriÃ³rna hustota\\ [0.2cm] \hline
+  \parbox[c]{3.5cm}{NajmenÅ¡ie Å¡tvorce} & Nie & Nie & Nie \\ [0.2cm] \hline
+  \parbox[c]{3.5cm}{NajmenÅ¡ie Å¡tvorce,\\Markov odhad}& Ãno & Nie & Nie \\ [0.2cm]   \hline
+  \parbox[c]{3.5cm}{MaximÃ¡lna\\vierohodnosÅ¥}& Ãno & Ãno & Nie \\ [0.2cm] \hline
+  \parbox[c]{3.5cm}{BayesovskÃ© metÃ³dy} & Ãno & Ãno & Ãno \\ [0.2cm] \hline
 \end{tabular}
     \label{TABULKA_3_1}
 \end{table}
 
-Na tabu¾ky taktie môeme odvoláva pomocou Tab. \ref{TABULKA_3_1}. Tabu¾ky taktie majú popis, dávame to nad tabu¾kou.
+Na tabuÄ¾ky taktieÅ¾ mÃ´Å¾eme odvolÃ¡vaÅ¥ pomocou Tab. \ref{TABULKA_3_1}. TabuÄ¾ky taktieÅ¾ majÃº popis, dÃ¡vame to nad tabuÄ¾kou. 
+
+Na zaÄiatku vety vypÃ½Å¡eme slovo TabuÄ¾ka, kÃ½m vÅ¡ade inde pouÅ¾Ã­vame skratku Tab.
+
+\section{FyzykÃ¡lne jednotky}
+
+FyzikÃ¡lne jednotky oddelujeme medzerou od ÄÃ­sla a pÃ­Å¡eme nezmenenÃ½m typom pÃ­sma, t.j. nepouÅ¾Ã­vame Å¡ikmÃ© pÃ­smo. PouÅ¾Ã­vame medzinÃ¡rodne znÃ¡me a akceptovanÃ© jednotky a skratky jednotiek. SprÃ¡vne je teda 10 V, nesprÃ¡vne je to 10V, 10 Volt, 10 \emph{V}. 
+
+
+\section{BibliografickÃ© citÃ¡cie}
+
+CitovaÅ¥ mÃ´Å¾eme nasledovne \cite{Eykhoff84}. Ak chceme citovaÅ¥ viacero autorov, tak mÃ´Å¾eme to robiÅ¥ naraz \cite{Fontes00,Eykhoff84}. Databazu citovanych dokumentov piseme do suboru *.bib. VÅ¡etky typy dokumentov (kniha, ÄlÃ¡nok etc.) mÃ¡ svoju vlastnÃº kategÃ³riu. Autora publikÃ¡cie mÃ´Å¾eme aj napÃ­saÅ¥, naprÃ­klad Å¾e v prÃ¡ci Qin a Badgwell \cite{Qin99} dokÃ¡zali Å¾e. CitÃ¡cia je sÃºÄasÅ¥ou vety, mÃ´Å¾eme to kombinovaÅ¥ do vety \cite{Karny80} alebo dÃ¡vaÅ¥ pred bodkou na koniec \cite{Far90}.
+
+\section{PrÃ­klad}
+
+Ak chceme uviesÅ¥ inÅ¡trukÄnÃ½ prÃ­klad, potom na to mÃ¡me prostredie
+\begin{exmp}
+JoÅ¾ko mÃ¡ 5 melÃ³nov, vypoÄÃ­tajte hmotnosÅ¥ Slnka.
+\end{exmp}
+kde prÃ­klad je ukonÄenÃ½ znamienkom QED (Å¡tvorec).
 
 
 
