@@ -1,0 +1,21 @@
+\select@language {slovak}
+\contentsline {chapter}{\IeC {\'U}vod}{1}
+\contentsline {chapter}{\numberline {1}Z\IeC {\'a}kladn\IeC {\'e} triky v LaTeX}{3}
+\contentsline {section}{\numberline {1.1}Vymenovanie, \IeC {\v c}\IeC {\'\i }slovanie}{3}
+\contentsline {section}{\numberline {1.2}Obr\IeC {\'a}zky}{4}
+\contentsline {subsection}{\numberline {1.2.1}Form\IeC {\'a}t obr\IeC {\'a}zkov}{4}
+\contentsline {subsection}{\numberline {1.2.2}Obr\IeC {\'a}zky z Matlabu}{4}
+\contentsline {section}{\numberline {1.3}Odvol\IeC {\'a}vky na \IeC {\v c}asti pr\IeC {\'a}ce}{4}
+\contentsline {section}{\numberline {1.4}Matematika}{4}
+\contentsline {section}{\numberline {1.5}Programy, a u\IeC {\v z}\IeC {\'\i }vate\IeC {\v l}sk\IeC {\'e} rozhrania}{5}
+\contentsline {subsection}{\numberline {1.5.1}Programy}{5}
+\contentsline {subsection}{\numberline {1.5.2}U\IeC {\v z}\IeC {\'\i }vate\IeC {\v l}sk\IeC {\'e} rozhrania}{5}
+\contentsline {section}{\numberline {1.6}Tabu\IeC {\v l}ky}{5}
+\contentsline {section}{\numberline {1.7}Fyzyk\IeC {\'a}lne jednotky}{5}
+\contentsline {section}{\numberline {1.8}Bibliografick\IeC {\'e} cit\IeC {\'a}cie}{6}
+\contentsline {section}{\numberline {1.9}Pr\IeC {\'\i }klad}{6}
+\contentsline {section}{\numberline {1.10}Ob\IeC {\'a}lka}{6}
+\contentsline {chapter}{\numberline {2}\IeC {\v D}al\IeC {\v s}ie kapitoly}{7}
+\contentsline {section}{\numberline {2.1}Podkapitola}{7}
+\contentsline {chapter}{\numberline {3}Z\IeC {\'a}ver}{9}
+\contentsline {chapter}{Literat\'{u}ra}{10}

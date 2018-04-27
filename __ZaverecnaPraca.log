@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.24)  27 APR 2018 14:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.24)  27 APR 2018 15:17
 entering extended mode
 **"C:/Dropbox/_school_/_teaching_/LaTeX Sablona/stuthesis/__ZaverecnaPraca.tex"
 
@@ -653,21 +653,21 @@ Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
-) (__ZaverecnaPraca.aux (Uvod.aux) (Kapitola1.aux))
+) (__ZaverecnaPraca.aux (Uvod.aux) (Kapitola1.aux) (Kapitola2.aux) (Zaver.aux))
 \openout1 = `__ZaverecnaPraca.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -759,33 +759,160 @@ G,.JBIG2,.JB2,.eps]
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count131
-(Obalka.tex
+(Obalka.tex [1
 
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
+{C:/Users/Gergely/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 ...OVENSK� TECHNICK� UNIVERZITA V BRATISLAVE}}
-                                                  \\
-? 
-! Emergency stop.
- ...                                              
-                                                  
-l.6 ...OVENSK� TECHNICK� UNIVERZITA V BRATISLAVE}}
-                                                  \\
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
+]) (Titul.tex [3] [4
 
- 
+]) (Zadanie.tex [5] [6
+
+]) (Prehlasenie.tex
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+[7] [8
+
+]) (Podakovanie.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
+
+ []
+
+[9] [10
+
+]) (Abstrakt.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--5
+
+ []
+
+[11] [12
+
+]) (Predhovor.tex [13
+
+] [14
+
+]) (__ZaverecnaPraca.toc)
+\tf@toc=\write3
+\openout3 = `__ZaverecnaPraca.toc'.
+
+ [15
+
+] [16
+
+]
+\openout2 = `Uvod.aux'.
+
+ (Uvod.tex) [1
+
+
+]
+\openout2 = `Kapitola1.aux'.
+
+ (Kapitola1.tex [2
+
+
+
+]
+Kapitola 1.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 13.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
+Package epstopdf Info: Source file: <obr/OBRAZOK1_1.eps>
+(epstopdf)                    date: 2014-06-06 12:48:54
+(epstopdf)                    size: 344038 bytes
+(epstopdf)             Output file: <obr/OBRAZOK1_1-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-06 09:13:21
+(epstopdf)                    size: 19009 bytes
+(epstopdf)             Command: <epstopdf --outfile=obr/OBRAZOK1_1-eps-converte
+d-to.pdf obr/OBRAZOK1_1.eps>
+(epstopdf)             \includegraphics on input line 43.
+Package epstopdf Info: Output file is already uptodate.
+
+<obr/OBRAZOK1_1-eps-converted-to.pdf, id=65, 227.85126pt x 148.555pt>
+File: obr/OBRAZOK1_1-eps-converted-to.pdf Graphic file (type pdf)
+
+<use obr/OBRAZOK1_1-eps-converted-to.pdf>
+Package pdftex.def Info: obr/OBRAZOK1_1-eps-converted-to.pdf used on input line
+ 43.
+(pdftex.def)             Requested size: 227.62204pt x 148.40955pt.
+ [3] [4 <./obr/OBRAZOK1_1-eps-converted-to.pdf>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 89.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 98.
+
+Overfull \hbox (6.07352pt too wide) in paragraph at lines 115--115
+\T1/cmr/m/n/12 pravdepodobnosti 
+ []
+
+
+LaTeX Warning: Citation `Fontes00' on page 5 undefined on input line 135.
+
+[5]) [6]
+\openout2 = `Kapitola2.aux'.
+
+ (Kapitola2.tex
+Kapitola 2.
+) [7
+
+
+
+]
+\openout2 = `Zaver.aux'.
+
+ (Zaver.tex [8
+
+
+
+]
+Kapitola 3.
+) [9] (__ZaverecnaPraca.bbl [10
+
+
+]) [11] (__ZaverecnaPraca.aux (Uvod.aux)
+(Kapitola1.aux) (Kapitola2.aux) (Zaver.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6561 strings out of 493362
- 88462 string characters out of 3139598
- 173203 words of memory out of 3000000
- 9969 multiletter control sequences out of 15000+200000
- 6253 words of font info for 18 fonts, out of 3000000 for 9000
+ 7659 strings out of 493362
+ 100458 string characters out of 3139598
+ 234454 words of memory out of 3000000
+ 10976 multiletter control sequences out of 15000+200000
+ 19900 words of font info for 49 fonts, out of 3000000 for 9000
  1127 hyphenation exceptions out of 8191
- 39i,1n,32p,908b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 39i,10n,51p,983b,1622s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}<C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/cm-super/sfbx2488.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/cm-super/sfrm0800.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-s
+uper/sfrm1200.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm
+1440.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfti1200.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sftt1200.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfxc1728.pfb>
+Output written on __ZaverecnaPraca.pdf (27 pages, 314750 bytes).
+PDF statistics:
+ 177 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -17,6 +17,14 @@
 \usepackage{notes}
 
 
+%This custom command defines how the literal menus look like.
+\newcommand{\gui}[1]{{\emph{#1}}} %Gui commands, icon names, buttons
+ % All code, functions, variables are typed like this
+\newcommand{\code}[1]{{\lstinline[columns=fixed]{#1}}}
+
+\newcommand{\angl}[1]{{\footnote{\emph{angl.}\ {#1}}}} %Shorthand english equivalent
+
+
 \usepackage[left=25mm,right=25mm,top=25mm,bottom=25mm,paperwidth=210mm,paperheight=297mm,includehead]{geometry}
 
 \usepackage{titlesec}
@@ -52,7 +60,7 @@ sensitive=true,
 alsoletter={_}
 }
 
- 
+
 
 \pagestyle{empty}
 
@@ -84,4 +92,4 @@ alsoletter={_}
 \bibliographystyle{abbrv}
 \addcontentsline{toc}{chapter}{Literat\'{u}ra}
 \bibliography{bibliog}
-\end{document} 
+\end{document}

@@ -8,7 +8,7 @@
 
 \section{Vymenovanie, číslovanie}
 
-Neusporiadané vymenovanie môžeme v prostredí \LaTeX robiť nasledovne:
+Neusporiadané vymenovanie môžeme v prostredí \LaTeX\ robiť nasledovne:
 \begin{itemize}
 \item Prvý bod,
 \item druhý bod,
@@ -17,10 +17,11 @@ Neusporiadané vymenovanie môžeme v prostredí \LaTeX robiť nasledovne:
 Samozrejme môžeme používať aj podúrovňe, teda
 \begin{itemize}
 \item Prvý bod,
-\item \begin{itemize}
-\item Janko,
-\item Ferko,
-\item Jožko.
+\item Druhý bod a s podúrovňou textu
+\begin{itemize}
+ \item Janko,
+ \item Ferko,
+ \item Jožko.
 \end{itemize}
 \item posledný bod.
 \end{itemize}
@@ -63,7 +64,7 @@ Z Matlabu exportujeme obrázky do formátu *.eps.
 \section{Odvolávky na časti práce}
 \label{hrusky}
 
-Kapitolu, podkapitolu alebo podobné veci označíme príkazom "label", a nasledovne na nich odvoláme príkazom "ref". Napríklad v Kap. \ref{jablka} sme odvodili\ldots. 
+Kapitolu, podkapitolu alebo podobné veci označíme príkazom "label", a nasledovne na nich odvoláme príkazom "ref". Napríklad v Kap. \ref{jablka} sme odvodili\ldots.
 Na začiatku vety vypýšeme slovo Kapitola, kým všade inde používame skratku Kap. Podkapitoly a pod-podkapitoly v odvolávkach nerozlišujeme, na štruktúru dokumentu používame vždy Kap.
 
 \section{Matematika}
@@ -79,7 +80,13 @@ kde potom môžeme odvolávať na rovnicu pomocou Rov. \eqref{mojarovnica}. Pozo
 
 Na začiatku vety vypýšeme slovo Rovnica, kým všade inde používame skratku Rov.
 
-\section{Počítačový program}
+\section{Programy, a užívateľské rozhrania}
+
+
+
+\subsection{Programy}
+
+Ak chceme písať názvy funkcií respektíve krátke časti počítačového kódu, môžeme na to používať príkaz \code{code}, napríklad \code{mojafunkcia()}.
 
 Počítačový program môžeme jednoducho vložiť do textu pomocou
 \lstset{language=exMatlab}
@@ -91,13 +98,16 @@ n=0:N-1;             % Poradove cisla vzorky
 x=sin(2*pi*f1*n/FS); % Generujeme signal, x(n)
 [Rxx,Tau]=xcorr(x);  % Odhad autokorelacnej funkcie
 \end{lstlisting}
-Jazyk programu vieme určiť my, napríklad Matlab tu je rozšírený o extra príkazy.
+Jazyk programu vieme určiť my, napríklad \code{Matlab} tu je rozšírený o extra príkazy.
 
+\subsection{Užívateľské rozhrania}
+
+Ak chceme označiť časti grafického rozhrania počítačového programu, cestu cez menu softvéru, názvy súborov atď, môžeme na to používať príkaz \code{gui}. Príkladom je \gui{File menu} alebo ikóna \gui{Môj počítač}.
 
 \section{Tabuľky}
 
-Toto je príklad tabuľky:
-\begin{table}[!h]
+
+\begin{table}[htb]
 \centering
 \caption{Zoradenie metód na základe objemu apriórnych znalostí}
 \begin{tabular}{ |l|c|c|c| }
@@ -111,18 +121,18 @@ Toto je príklad tabuľky:
     \label{TABULKA_3_1}
 \end{table}
 
-Na tabuľky taktiež môžeme odvolávať pomocou Tab. \ref{TABULKA_3_1}. Tabuľky taktiež majú popis, dávame to nad tabuľkou. 
+Na tabuľky taktiež môžeme odvolávať pomocou Tab. \ref{TABULKA_3_1}. Tabuľky taktiež majú popis, dávame to nad tabuľkou.
 
-Na začiatku vety vypýšeme slovo Tabuľka, kým všade inde používame skratku Tab.
+Na začiatku vety vypíšeme slovo Tabuľka, kým všade inde používame skratku Tab.
 
 \section{Fyzykálne jednotky}
 
-Fyzikálne jednotky oddelujeme medzerou od čísla a píšeme nezmeneným typom písma, t.j. nepoužívame šikmé písmo. Používame medzinárodne známe a akceptované jednotky a skratky jednotiek. Správne je teda 10 V, nesprávne je to 10V, 10 Volt, 10 \emph{V}. 
+Fyzikálne jednotky oddeľujeme medzerou od čísla a píšeme nezmeneným typom písma, t.j. nepoužívame šikmé písmo. Používame medzinárodne známe a akceptované jednotky a skratky jednotiek. Správne je teda 10 V, nesprávne je to 10V, 10 Volt, 10 \emph{V}.
 
 
 \section{Bibliografické citácie}
 
-Citovať môžeme nasledovne \cite{Eykhoff84}. Ak chceme citovať viacero autorov, tak môžeme to robiť naraz \cite{Fontes00,Eykhoff84}. Databazu citovanych dokumentov piseme do suboru *.bib. Všetky typy dokumentov (kniha, článok etc.) má svoju vlastnú kategóriu. Autora publikácie môžeme aj napísať, napríklad že v práci Qin a Badgwell \cite{Qin99} dokázali že. Citácia je súčasťou vety, môžeme to kombinovať do vety \cite{Karny80} alebo dávať pred bodkou na koniec \cite{Far90}.
+Citovať môžeme nasledovne \cite{Eykhoff84}. Ak chceme citovať viacero autorov, tak môžeme to robiť naraz \cite{Fontes00,Eykhoff84}. Databazu citovaných dokumentov píšeme do súboru *.bib. Všetky typy dokumentov (kniha, článok etc.) má svoju vlastnú kategóriu. Autora publikácie môžeme aj napísať, napríklad že v práci Qin a Badgwell \cite{Qin99} dokázali že. Citácia je súčasťou vety, môžeme to kombinovať do vety \cite{Karny80} alebo dávať pred bodkou na koniec \cite{Far90}.
 
 \section{Príklad}
 
@@ -131,6 +141,11 @@ Ak chceme uviesť inštrukčný príklad, potom na to máme prostredie
 Jožko má 5 melónov, vypočítajte hmotnosť Slnka.
 \end{exmp}
 kde príklad je ukončený znamienkom QED (štvorec).
+
+
+\section{Obálka}
+
+Prvú a druhú (prázdnu stranu) nezviažeme do záverečnej práce, slúži to iba ako podklad na vyhotovenie obálky.
 
 
 
