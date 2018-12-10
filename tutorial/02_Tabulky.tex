@@ -1,0 +1,51 @@
+\documentclass{book}
+
+\begin{document} 
+
+Tabulky definujeme s prostredim „tabular“. Vedla tabulky mozeme zadefinovat aj zarovnanie buniek:
+
+\begin{tabular}{ l c r }
+  1 & 2 & 3 \\
+  4 & 5 & 6 \\
+  7 & 8 & 9 \\
+\end{tabular}
+
+Ciarky mozeme pridat nasledovne
+
+\begin{tabular}{| l  | c | r | }
+  1 & 2 & 3 \\
+  \hline
+  4 & 5 & 6 \\
+  7 & 8 & 9 \\
+\end{tabular}
+
+Ak chceme definovat umiestnenie v dokumente s tym ze davame aj popis aj referenciu tak musime
+\begin{table}
+\centering
+\caption{Popis tabulky}
+\begin{tabular}{ l   c  r  }
+  1 & 2 & 3 \\
+  \hline
+  4 & 5 & 6 \\
+  7 & 8 & 9 \\
+\end{tabular}
+\label{mojatabulka}
+\end{table}
+
+Umiestnenie tabulky mozeme aj nutit:
+\begin{table}[!h]
+\centering
+\caption{Popis tabulky}
+\begin{tabular}{ l   c  r  }
+  1 & 2 & 3 \\
+  \hline
+  4 & 5 & 6 \\
+  7 & 8 & 9 \\
+\end{tabular}
+\label{mojatabulka}
+\end{table}
+
+
+
+
+\end{document} 

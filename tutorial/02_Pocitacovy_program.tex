@@ -1,0 +1,20 @@
+\documentclass{book}
+\usepackage{listings}
+
+\lstdefinelanguage{mojMatlab}[]{Matlab}      %Defining expanded Matlab
+{morekeywords={mojafunkcia,mojadruhafunkcia},
+sensitive=true,
+alsoletter={_}
+}
+
+\begin{document}
+Toto je funkcia rovno v texte, napriklad funkcia \lstinline[columns=fixed]{mojafunkcia()}. Alebo mozeme pisat zvlast: 
+\begin{lstlisting}[language=Matlab]
+A=eig(B); %Vlastne cisla
+\end{lstlisting}
+
+Do konca vieme aj nacitat z vonkajsieho suboru:
+\lstinputlisting[language=Matlab, firstline=2, lastline=2]{matlabsubor.m}
+
+
+\end{document} 
